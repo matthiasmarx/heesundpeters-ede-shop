@@ -1,0 +1,53 @@
+
+@import '../var'
+
+/* --------------------------------------------------------------------------------------
+    ------------------------PAGINATION Seiten---------------------------------------------
+    ---------------------------------------------------------------------------------------*/ 
+
+
+.list_box
+    border-bottom: 1px solid $grey3
+    // border-top: 1px solid $grey3
+    margin-bottom: 0 
+    padding: 10px 
+    .popup_cont:first-child .popup_toggle 
+        > a 
+            background: $prime-light 
+            border-bottom: 0 
+            color: $prime
+            margin-right: 5px
+            &.active
+                background: $prime 
+                color: #fff 
+        ~ .popup_div > a
+            background: $prime-light 
+            border-bottom: 0 
+            color: $prime
+            margin-bottom: 5px 
+            &.active
+                background: $prime 
+                color: #fff 
+    .popup_cont:not(:first-child) .popup_div 
+        > a 
+            
+            &.active
+                background: $prime-light 
+                border-bottom: 0 
+                color: $prime
+
+.list-box:last-of-type
+    margin-top: 10px 
+/* --------------------------------------------------------------------------------------
+    ------------------------Warenkorb Button---------------------------------------------
+    ---------------------------------------------------------------------------------------*/ 
+.multi_warenkorb
+    .submit_green
+        text-transform: initial 
+
+
+
+/*CHECKEN*/
+
+.variantIsMainproduct 
+    background-color: #fff

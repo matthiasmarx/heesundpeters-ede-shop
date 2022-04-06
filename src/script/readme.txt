@@ -14,7 +14,7 @@ funktion mergeSort(liste) {
 }
 
 funktion merge(liste1, liste2) {
-    let neueListe;
+    let neueListe
     solange liste1 und liste2 nicht leer 
         falls (erstes Element liste1 <= erstes Element liste2)
             füge erstes Element aus liste1 in neueListe ein und entferne es aus liste1 

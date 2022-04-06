@@ -1,0 +1,86 @@
+
+@import '../var'
+
+form[name=multi_warenkorb] , .breadcrumbs ~
+    table  , .ribbon_force_animation > table
+        border-bottom: 1px solid $grey2
+    
+    .ribbon_force_animation:nth-child(even) > div ~ table.quickbuy_list
+        background-color: $greylight 
+        .quickbuy_list_preis
+            background-color: $greylight 
+    .quickbuy_list , .ribbon_force_animation .quickbuy_list
+        border-right: 1px solid $grey2 
+        border-bottom: 1px solid $grey2
+        border-left: 1px solid $grey2 
+
+        .quickbuy_list_image
+            border: 0 
+            border-right: 1px solid $grey2 
+
+            img 
+                min-width: 140px 
+        .quickbuy_list_details
+            border: 0
+            border-right: 1px solid $grey2 
+            padding: 0 
+            a 
+                padding: 10px 
+                border-bottom: 1px solid $grey2
+                display: block
+
+                > b 
+                    font-family: $euro
+                    font-weight: 700
+                    font-size: 16px 
+                    color: $dark 
+                font
+                    font-size: 12px 
+                    color: $grey3 
+            .art_details_list
+                padding: 5px 0 5px 10px
+                // max-width: 100% 
+                .span_table_caption , .span_table_content 
+                    border-color: $grey2 
+                    color: $text 
+                .span_table_caption
+                    width: 55%
+                    i.mdi
+                        color: $text 
+                        display: none 
+                    
+                      
+        .quickbuy_list_preis
+            border: 0 
+            .preis_list_container .preis_ajax_preis
+                font-family: $euro
+                font-weight: 700
+                color: $darkred 
+
+// Warenkorb Button Style
+form[name=multi_warenkorb]
+    > table
+        width: calc( 100% - 20px) 
+        margin: 0 auto 
+        border-bottom: 1px solid $grey2 
+        .addtocart
+            text-transform: initial 
+            margin: 15px 0
+            
+
+
+
+
+/*Fix für nicht angemeldete Benutzer*/
+.breadcrumbs~.ribbon_force_animation:nth-child(1n)>div~table.quickbuy_list
+    background: #fff 
+    .quickbuy_list_preis
+        background-color: #fff
+.breadcrumbs~.ribbon_force_animation:nth-child(2n)>div~table.quickbuy_list
+    background: $greylight    
+    .quickbuy_list_preis
+        background-color: $greylight            
+
+@media screen and (max-width:1090px)
+    .art_details_list 
+        max-width: 48vw 

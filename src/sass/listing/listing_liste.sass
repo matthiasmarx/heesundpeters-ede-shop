@@ -1,0 +1,69 @@
+
+@import '../var'
+
+.artlist_outer_frame 
+    border: 1px solid $grey2 
+    margin: 5px 10px
+    width: calc(100% - 20px)
+    display: flex
+    align-items: center
+
+
+    &:hover
+        border-left-color: $grey2 
+
+    /*Bild*/
+    .artlist_image_frame
+        border-right: 1px solid $grey2 
+
+    /*DEtails + Titel*/
+    .artlist_title_frame
+        padding: 0 
+        margin-left: -1px
+        border-left: 1px solid $grey2 
+        border-right: 1px solid $grey2 
+        width: 60%
+        b
+            font-family: $euro 
+            font-weight: 700 
+            color: $dark 
+            font-size: 16px 
+            padding: 5px 5px 10px 10px 
+            display: block 
+            border-bottom: 1px solid $grey2 
+        .art_details_list
+            li 
+                .span_table_caption 
+                    padding-left: 10px
+                    .mdi
+                        display: none 
+                &:last-child 
+                    span
+                        border-bottom: 0 
+    
+    /*Preis Rechts*/
+    .artlist_preis_frame
+        .preis_list_preis
+            margin-top: 0 !important
+        .preis_ajax_preis
+            font-family: $euro
+            font-weight: 700
+            color: $darkred 
+                
+
+
+@media screen and (max-width: 558px)
+    .lager_div_elem
+        border: 0 
+    .lager_div_text
+        font-size: 10px 
+
+    
+@media screen and (max-width: 480px)
+    .artlist_outer_frame .artlist_title_frame
+        border-right: 0 
+        border-left: 0 
+    .artlist_outer_frame .artlist_image_frame
+        border: 0 
+        img 
+            margin-top: -15px

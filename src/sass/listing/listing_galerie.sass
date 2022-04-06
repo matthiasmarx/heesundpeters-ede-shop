@@ -1,0 +1,46 @@
+
+@import '../var'
+
+$rahmen-farbe: $prime-mid
+    
+.artangebote_outer_frame   
+    border-color: $grey2 
+    &:hover
+        box-shadow: 0 0 10px rgba(0,0,0,.3)
+        border: 1px solid $rahmen-farbe 
+       
+    .artangebote_image_frame
+        background-size: 70%
+        background-position: 50% 50%
+        margin-top: 40px
+    .artangebote_title_frame
+        font-family: $euro 
+        font-weight: 700
+        font-size: 13px 
+        letter-spacing: .3px 
+        padding: 8px 6%
+        box-sizing: border-box
+        background: #fff
+        border-bottom: 1px solid $grey2 
+        color: $dark 
+    .artangebote_preis_frame
+        background: linear-gradient(0,#fff 0% , #fff 40%, transparent 90% )
+        padding-bottom: 15px 
+        padding-top: 50px
+        .preis_ajax_preis
+            color: $darkred 
+            font-family: $euro 
+            font-weight: 700
+.artangebote_popup
+    height: 356px
+    top: -1px
+    border: 1px solid $rahmen-farbe 
+    border-left: 1px solid $grey2
+    &.artangebote_popup_right
+        border-left: 1px solid $rahmen-farbe 
+        border-right: 1px solid $grey2
+    .art_details_list
+        .span_table_caption .mdi
+           display: none 
+        .art_details_toggle
+            background: $greylight 

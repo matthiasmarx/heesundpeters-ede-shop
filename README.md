@@ -1,4 +1,4 @@
-# Startercode EDE Shop
+# Hees und Peters EDE Shop
 * SASS Code für den Shop
 
 Use latest node version (17.01)

@@ -1,0 +1,313 @@
+@import './var'
+
+// Footer Entwciklung
+.custom-footer-entwicklung
+    display: block !important
+    
+#sub_template_footer 
+    display: none 
+    
+#template_footer 
+    max-width: 100%
+    background: transparent 
+
+    .template_footer_row 
+        display: flex
+        flex-direction: column
+        width: calc(100% - 50px) !important
+        margin: 12.5px 25px 
+        background: $dark
+       
+        h5 
+            font-size: 30px 
+            font-family: $euro-cond 
+            line-height: 1 
+            margin: 0 0 1em 0 
+        .uppercase 
+            letter-spacing: 1px
+            text-transform: uppercase 
+            margin: .5em 0 .5em 0
+            display: block 
+        a 
+            color: $prime 
+        .footer-normal-list
+            padding: 0 
+            margin: 0 
+            li 
+                padding: 1px 0 
+                a 
+                    color: #fff 
+                    &:hover 
+                        color: $prime 
+        ul.template_footer_container
+            box-sizing: border-box
+            width: 100%
+            border-top: 12.5px $greylight solid 
+            border-bottom: 12.5px $greylight solid 
+            margin: 0 
+            padding: 1.5%
+            
+            // Template Footer Head ausblenden
+            .template_footer_head
+                display: none 
+            .user_content
+                max-width: 1200px 
+                margin: 0 auto 
+            // Footer Bereich 1
+            &:nth-child(1)
+                background: $grey2 
+                color: $dark 
+                .user_content
+                    max-width: 100%
+                    display: flex 
+                    align-items: center 
+                    justify-content: space-between 
+                    flex-wrap: wrap
+                    .footer25
+                        display: flex 
+                        align-items: center 
+                        > div
+                            display: flex
+                            flex-direction: column 
+                            .usp-head
+                                font-family: $euro-cond 
+                                font-size: 21px 
+                                text-transform: uppercase
+                                color: $dark 
+                            .usp-desc 
+                                color: $text 
+                                font-size: 11px 
+                        > img 
+                            padding-right: 20px 
+                    
+                *
+                    color: $dark 
+            // FOoter Bereich 2
+            &:nth-child(2)
+                .user_content
+                    display: flex 
+                    margin: 70px auto 
+                    .footer-30
+                        width: 33.33% 
+
+                    .footer-vorteile
+                        margin: 0 
+                        padding: 0 
+                        list-style: none 
+                        li 
+                            margin: 0 
+                            padding: 5px 0 5px 25px 
+                            position: relative 
+                            &::before 
+                                content: "" 
+                                position: absolute
+                                left: 0 
+                                top: 50% 
+                                transform: translateY(-50%)
+                                background-image: url(https://shop.heesundpeters.com/benutzerdaten/400002/HP_Design/footer_header/list.png)
+                                height: 15px 
+                                width: 15px 
+                                background-size: contain
+                                background-repeat: no-repeat
+                    .social-wrap-footer
+                        margin-bottom: 30px 
+                        a 
+                            padding-right: 15px 
+                    .app-download-wrap
+                        margin-bottom: 30px 
+                        img
+                            height: 40px !important
+                    .shopanbindungen-wrap
+                        img 
+                            max-width: 320px 
+                    form[name="register_nl"]
+                        input.submit 
+                                width: 100%
+                                font-size: 14px !important
+
+            // Footer Bereich 3
+            &:nth-child(3)
+                background: $text 
+                padding: 0 2%
+                height: auto 
+                border-top-width: 25px 
+                .user_content
+                    display: flex 
+                    margin: 0 auto
+                    height: 100%
+                    position: relative
+                     
+                    .footer3-pay-delivery-wrap
+                        margin: 70px 0
+                        width: 60%
+                        display: flex 
+                        > div 
+                            width: 50% 
+                            > div 
+                                display: flex 
+                                flex-wrap: wrap 
+                                img 
+                                    margin-right: 12.5px 
+                                    margin-bottom: 12.5px 
+                    .overlap-wish-article 
+                        background: $grey2 
+                        padding: 50px 100px 
+                        box-sizing: border-box 
+                        display: flex 
+                        flex-direction: column 
+                        align-items: center 
+                        justify-content: center 
+                        height: calc(100% + 25px) 
+                        transform: translateY(-12.5px)
+                        box-shadow: 0 0 20px rgba(11, 32, 41, 0.47)
+                        position: absolute 
+                        right: 0
+
+                        h5 
+                            margin-bottom: .5em
+
+                        p 
+                            color: $text 
+
+                        a.btn 
+                            background: $prime 
+                            color: #fff 
+                            margin-top: 20px 
+                            display: block 
+                            transition: ease all 400ms 
+                            &:hover 
+                                background: $dark 
+
+                        
+            // Footer Bereich 4
+            &:nth-child(4)
+                background: $greylight 
+                color: $dark 
+                *
+                    color: $dark 
+                .footer-normal-list
+                    a 
+                        color: $text 
+                        &:hover 
+                            color: $prime 
+
+                
+#datenschutz_popup_open
+    background: #fff
+    padding: 20px
+    box-sizing: border-box  
+    width: calc(100% - 50px)
+    margin: 0 25px 
+    display: block 
+
+
+/*USP Responsive*/
+
+@media only screen and (max-width: 1370px)
+    #template_footer .template_footer_row ul.template_footer_container:first-child .user_content .footer25>div .usp-head 
+        font-size: 18px
+
+@media only screen and (max-width: 1200px)
+    #template_footer .template_footer_row ul.template_footer_container:first-child .user_content
+        .footer25
+            align-items: center 
+            justify-content: flex-start 
+            padding: 20px 15px 
+            box-sizing: border-box 
+            &:nth-child(3)
+                display: none 
+
+@media only screen and (max-width: 920px)
+    #template_footer .template_footer_row ul.template_footer_container:first-child .user_content
+        .footer25
+            width: 50%
+            &:nth-child(3)
+                display: flex 
+
+
+@media only screen and (max-width: 780px)
+    #template_footer .template_footer_row ul.template_footer_container:first-child .user_content
+        .footer25
+            width: 100%
+
+
+
+/*Footer Rest Resonsive*/
+@media only screen and (max-width: 1370px)
+    #template_footer .template_footer_row ul.template_footer_container:nth-child(2) .user_content
+        margin: 40px auto 
+
+
+@media only screen and (max-width: 1060px) and (min-width: 710px)
+    #template_footer .template_footer_row ul.template_footer_container:nth-child(2) 
+        .user_content 
+            flex-wrap: wrap 
+            padding: 0 25px
+            .footer-30
+                width: 50%
+                &:nth-child(3)
+                    width: 100% 
+                    display: flex 
+                    margin-top: 60px 
+                    padding-top: 60px 
+                    border-top: 1px solid rgba(255,255,255,.2)
+                    > div
+                        width: 50%
+
+@media only screen and (max-width: 60em)
+    #template_footer ul
+        width: 100% !important 
+        &.footer-vorteile
+            padding-bottom: 40px !important 
+    
+@media only screen and (max-width: 710px)
+    #template_footer .template_footer_row ul.template_footer_container:nth-child(2) 
+        .user_content 
+            flex-wrap: wrap 
+            padding: 0 25px 
+            .footer-30
+                width: 100%
+                margin-bottom: 50px 
+
+
+/*Footer 3 Responsiv*/
+@media only screen and (max-width: 1060px)
+    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .overlap-wish-article
+        padding: 50px 60px 
+    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .footer3-pay-delivery-wrap
+        flex-wrap: wrap 
+        box-sizing: border-box
+        > div 
+            width: 100% 
+
+@media only screen and (max-width: 820px)
+    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content
+        flex-wrap: wrap 
+        padding-bottom: 40px 
+        padding-left: 25px 
+        padding-right: 25px 
+        box-sizing: border-box 
+    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .overlap-wish-article
+        position: relative 
+        transform: none
+        width: 100% 
+        align-items: flex-start
+    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .footer3-pay-delivery-wrap
+        width: 100% 
+    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .footer3-pay-delivery-wrap
+        > div 
+            width: 50% 
+
+@media only screen and (max-width: 680px)
+        #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .footer3-pay-delivery-wrap
+            > div 
+                width: 100% 
+
+
+
+@media only screen and (max-width: 410px)
+    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .overlap-wish-article
+        padding: 30px !important 
+
+    #template_footer .template_footer_row h5
+        font-size: 20px 

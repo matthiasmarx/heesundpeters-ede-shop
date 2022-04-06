@@ -1,0 +1,36 @@
+@import './var'
+
+.admin_item_button
+    background: $greylight 
+    margin: 10px 
+    width: calc(100% - 20px)
+    border-bottom: 5px solid $greylight
+    transition: ease all 300ms 
+    &:hover 
+        border-bottom: 5px solid $dark 
+        .admin_item_title
+            padding-left: 25px 
+            &::before 
+                width: 15px 
+                opacity: 1 
+    .admin_item_title
+        font-family: $euro 
+        font-weight: 700 
+        color: $dark 
+        letter-spacing: .3px 
+        font-size: 16px 
+        transition: ease all 400ms 
+        position: relative
+        &::before 
+            content: ""
+            position: absolute 
+            left: 0
+            top: calc(50% - 1px)
+            height: 2px 
+            width: 0 
+            background: $prime 
+            opacity: 0 
+            transition: ease all 400ms 200ms 
+    .light
+        color: $text 
+

@@ -1,0 +1,189 @@
+
+@import './var'
+
+/* --------------------------------------------------------------------------------------
+    -------------------------BREADCRUMBS LOESEN---------------------------------------------
+    ---------------------------------------------------------------------------------------*/        
+
+$breadcrum-height: 45px 
+
+.template_wrapper:not(#top_wrapper)
+    position: relative
+    margin-bottom: 25px
+
+#template_center_column:not(.template_full_column)
+   
+    > span.breadcrumbs
+        margin: 0 
+        position: absolute
+        left: 0 
+        top: 0 
+        padding: 10px 
+        background: $greylight 
+        width: 100%
+        min-height: $breadcrum-height 
+        box-sizing: border-box
+        font-family: $euro
+        font-weight: 700 
+        font-size: 15px
+        color: $text
+        &::before
+            content: ""
+            position: absolute 
+            left: 0 
+            top: 50%
+            transform: translateY(-75%)
+            padding-right: 10px 
+            width: 37px 
+            height: 14px 
+            background-image: url(https://shop.heesundpeters.com/benutzerdaten/400002/HP_Design/breadcrumb-home.png) //ICON UPLOAD breadcrumb-home.png
+            background-size: contain 
+            background-position: center center 
+            background-repeat: no-repeat 
+
+        a
+            font-family: $euro
+            font-weight: 700 
+            font-size: 15px
+            color: $text
+            &:first-child 
+                margin-left: 45px 
+        .mdi
+            color: $text
+            top: -1px
+            position: relative
+
+        
+
+#template_left_column , #template_center_column
+    margin-top: $breadcrum-height
+
+
+
+/* --------------------------------------------------------------------------------------
+    -------------------------SIDEBAR STYLE---------------------------------------------
+    ---------------------------------------------------------------------------------------*/ 
+
+
+.template_sidebar_container 
+    h4
+        font-family: $euro-cond
+        font-weight: 800
+        font-size: 25px
+        line-height: 1 
+        color: $dark  
+    #finder
+        margin-bottom: 30px 
+    > ul > li
+        border-bottom: 1px solid $grey2
+        > ul li a
+            font-size: 14px 
+        > a
+            font-size: 16px 
+            letter-spacing: .1px 
+
+        a , a *
+            font-family: $euro
+            color: $text 
+// HEttich Konfigurator
+.contentbox_container
+    padding: 10px 
+.sidebar_contentbox      
+    h4
+        font-family: $euro-cond
+        font-weight: 800
+        font-size: 20px
+        line-height: 1 
+        color: $dark 
+        margin: 30px 0 0 0  
+        padding: 0 0 10px 0       
+    .sidebar_box
+        background: $greylight 
+        padding: 10px 
+        .user_content p 
+            margin: 0 
+            > strong > span > a 
+                display: none
+
+
+/* --------------------------------------------------------------------------------------
+    -------------------------FILTER STYLE---------------------------------------------
+    ---------------------------------------------------------------------------------------*/ 
+
+.template_sidebar_container .finder_content
+    margin-top: 10px 
+
+#finder > ul ul li:hover
+    background: $dark
+    color: #ffffff
+    a 
+        color: #fff 
+
+/* --------------------------------------------------------------------------------------
+    -------------------------Kategorien Div STYLE---------------------------------------------
+    ---------------------------------------------------------------------------------------*/ 
+#template_center_column
+    .cat_outer_frame
+        border: 0
+        margin-bottom: 25px
+        .cat_image_frame
+            border: 1px solid $grey2 
+            position: relative
+            background-size: 60%
+            background-position: 50% 25% 
+        .cat_title_frame
+            border-top: 0 
+            background-color: transparent 
+            opacity: 1 
+            position: relative 
+            height: fit-content 
+            position: absolute 
+            top: 100%
+            left: 50% 
+            transform: translateX(-50%) translateY(-50%)
+            
+            &::before
+                content: ""
+                position: absolute 
+                width: 80% 
+                height: 100% 
+                background-color: $prime 
+                left: 50%
+                top: 0 
+                transform:  translateX( -50% ) skew(-22deg, 0deg)
+                transition: ease all 400ms 
+            
+            h3
+                color: #fff 
+                position: relative
+                font-family: $euro 
+                font-weight: 300 
+                font-size: 14px 
+                max-width: 75%
+                padding: 3px 5px 
+                letter-spacing: .3px 
+        &:hover
+            .cat_title_frame::before
+                transform: translateX( -50% ) skew(0deg, 0deg)
+                background-color: $dark  
+                width: 90%
+
+/* --------------------------------------------------------------------------------------
+    -------------------------Test- Right Column Wrapper in Rahmen setzen---------------------------------------------
+    ---------------------------------------------------------------------------------------*/ 
+#template_left_column
+     border-right: 1px solid $grey3
+#template_center_column:not(.template_full_column)
+    border-left: 1px solid $grey3
+    padding: 0
+    margin-left: -1px  
+.breadcrumbs~.ribbon_force_animation, form[name=multi_warenkorb] .ribbon_force_animation 
+    padding: 0 10px
+
+
+
+/*Responsive Border entfernen*/
+
+@media only screen and (max-width:960px) 
+    #template_center_column:not(.template_full_column)
+        border-left: 0    

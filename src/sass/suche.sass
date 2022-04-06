@@ -1,0 +1,90 @@
+@import './var'
+
+/* --------------------------------------------------------------------------------------
+    -------------------------SUCHE STYLE------------------------------------
+    ---------------------------------------------------------------------------------------*/
+.sticky_navi_fixed #template_search_form
+    top: 0 
+.template_header_item #template_search_text
+    box-shadow: none
+    border-color: $grey3
+    &::placeholder
+        font-family: $euro-cond
+        font-weight: 800
+        font-size: 18px 
+        text-transform: uppercase
+        color: $grey3
+        letter-spacing: .6px
+
+    &:focus
+        outline: 0 
+        border-color: $prime 
+        ~ #template_search_submit
+            border-color: $prime 
+    ~ #template_search_submit
+        background: #fff 
+        border-width: 1px 1px 1px 0 
+        border-style: solid 
+        border-color: $grey3
+        .mdi
+            color: $prime
+            &::before
+                transition: ease all 500ms 
+        &:hover .mdi::before
+            transform: rotate(-270deg) scale(1.1)
+
+
+@media only screen and (max-width:60em)
+    #template_header .template_header_item.template_search
+        
+        #template_search_submit .mdi 
+            font-size: 20px 
+
+
+
+/*Suche Suggestions COntainer*/
+.ajax_search_results 
+    .art , .artcontainer
+        width: 448px
+
+.ajax_search_results
+    padding: 0 
+    .ap
+        transition: ease background-color 300ms 
+    .ap_active
+        background-color: $greylight
+        font-weight: initial
+        border-right: 5px solid $prime 
+    .suggestcontainer , .artcontainer
+        padding: 0 
+        margin: 0 
+        .cap
+            font-family: $euro
+            font-weight: 700 
+            letter-spacing: 2px 
+            text-transform: uppercase
+            background: $greylight
+            padding: 5px 10px 
+            color: $grey3 
+            &.show_all
+                background: $prime     
+                margin-left: 0 
+                width: 428px
+                text-transform: initial 
+                letter-spacing: .3px 
+                color: #fff
+                &:hover
+                    background: $dark 
+
+    .artcontainer
+        border-left: 1px solid $grey2 
+        padding-bottom: 35px
+    .as_active, .as_active:hover
+        background: $dark 
+        &::after
+            border-left-color: $dark 
+            border-top: 15px solid transparent
+            border-bottom: 15px solid transparent
+
+    
+      

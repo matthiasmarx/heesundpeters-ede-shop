@@ -1,0 +1,225 @@
+@import './var'
+
+#template_header .template_header_item .template_cart_count 
+    background: $prime none repeat scroll 0 0
+
+    
+/*OFF CANVAS WARENKORB*/
+
+.qwk_list .qwk_preis 
+    font-family: $euro
+    font-weight: 700
+    color: $darkred 
+    font-style: italic
+
+/*Main Warenkorb*/
+#fastcart
+    input[type="submit"].dark_button
+        background: $dark 
+        text-transform: initial
+        &:hover
+            background: $prime  
+    
+button[title=" mehrere Artikel"]
+    background: $dark !important
+    text-transform: initial
+    span
+        font-family: $euro !important
+        line-height: 1 
+        text-transform: capitalize
+    &:hover
+        background: $prime !important 
+
+button[title="Warenkorb Upload"]
+    background: $dark !important
+    &:hover
+        background: $prime !important 
+
+#preisnote
+    border-bottom: 1px solid $grey2
+    padding-top: 0 !important 
+    margin-bottom: -1px !important 
+
+    
+#template_center_column .shop_tabs 
+    ~ div.main_caption
+        border-bottom: 1px solid $grey2 
+        border-top: 1px solid $grey2 
+        font-family: $euro-cond
+        font-weight: 800 
+        font-size: 25px 
+        
+    ~ .content_box
+        width: calc( 100% - 40px )
+        margin: 25px auto 0 auto !important
+
+form#cartform .art_details_list 
+    max-width: 412px !important
+
+/*Warenkorb Tabelle*/
+#cartform , .mobile_ordertable
+    padding: 0 20px
+    b 
+        font-family: $euro 
+        font-weight: 700
+        color: $dark  
+    /*Tabellenüberschriften -- Kopfzeile */
+    i:not(.mdi) 
+        font-family: $euro 
+        text-transform: uppercase
+        letter-spacing: 2px 
+        color: $grey3
+        font-style: normal 
+        font-weight: 700 
+    /*Artikelnummer*/
+    a i:not(.mdi)
+        font-size: 12px 
+        font-family: 'Open Sans', sans-serif 
+        font-weight: 400 
+        text-transform: none
+        letter-spacing: 0
+    /*Artikelname*/  
+    a:not(.button) 
+        font-family: $euro 
+        font-weight: 700
+        color: $dark
+        font-size: 15px   
+    table 
+        .mobile_wk_toggle 
+            .mobile_widthfix 
+                border-left: 1px solid $grey2 !important
+                border-right: 1px solid $grey2 !important
+                background: $greylight !important 
+            tr:last-child 
+                border: 0 !important 
+                td 
+                    border: 0 !important 
+               
+                    
+    table > tr > td.mobile_widthfix:not(.mobile_wk_toggle)
+        background: yellow !important 
+    
+    .mobile_widthfix 
+        background: $greylight 
+
+        /*Preis Artikel gesamt*/
+        table tr td b font 
+            font-family: $euro 
+            font-weight: 700
+            color: $dark 
+    /*Preis Warenkorb Gesamt*/
+    .wk_bottom_buttons
+        background: #fff
+        border-top: 1px solid $grey2
+        border-bottom: 1px solid $grey2
+        border-left: 1px solid $grey2 
+        b 
+            font-family: $euro 
+            font-weight: 700
+            color: $dark 
+        td.mobile_hide_mini.padding
+            background: $greylight !important
+            border: 1px solid $grey2 !important 
+
+    /*Buttons -- leeren speichern pdf aktualisieren*/
+    a.warenkorb_button , .update_wk_menge
+        background: $grey2 
+        span 
+            font-family: $euro 
+            text-transform: none 
+            color: $dark  
+            font-size: 14px 
+        i.mdi 
+            color: $dark 
+        &:hover
+            background: $dark 
+            span , i.mdi 
+                color: #fff 
+            
+    /*Image COlumn - Produktbild*/
+    .mobile_prodimg
+        border: 1px solid $grey2 
+    td[valign="top"]
+        border: 1px solid $grey2 !important 
+        
+
+    td.admin_cms_content.mobile_widthfix.mobile_hide_mini
+        background: #fff
+        border: 0 !important
+    
+    /*Versandkoste Preis*/
+    td[rowspan="2"]
+        background: $greylight !important
+        border: 1px solid $grey2 !important 
+    /*Leere Zeile*/
+    tr td.mobile_colspanfix , tr td.mobile_colspanfix ~ * 
+        border: 0 !important 
+        background: #fff !important
+
+    /*Detail Tabelle*/
+    .art_details_list
+        .span_table_caption 
+            .mdi
+                display: none     
+
+        border-top: 1px solid $grey2
+        margin-top: 10px 
+        
+            
+/*ZUR KASSE*/
+.wk_btn_right
+    margin-right: 19px
+    .btn_continue_checkout
+        text-transform: none
+
+.wk_anf_right
+    margin-top: 10px 
+    margin-right: 19px 
+    .warenkorb_button
+        font-family: 'Open Sans', sans-serif
+        font-weight: 700 
+        font-size: 13px 
+        &:hover
+            background: $dark
+            color: #fff
+
+    
+#cartugl , #etike
+    .btnsubmit button
+        background: $grey2 
+        span 
+            font-family: $euro 
+            text-transform: none 
+            color: $dark  
+            font-size: 14px 
+        i.mdi 
+            color: $dark 
+        &:hover
+            background: $dark 
+            span , i.mdi 
+                color: #fff 
+
+
+.mobile_show_mini
+    font 
+        font-family: $euro 
+        font-weight: 700
+    &.dark_caption
+        b
+            font-family: $euro 
+            font-weight: 700
+
+
+@media only screen and (max-width:30em)
+    #cartform
+        padding: 0 10px
+    .mobile_delete_pos
+        right: 15px 
+    //ZUR KASSE BUTTON ETC.
+    .wk_btn_right
+        margin: 10px 
+        width: calc(100% - 20px)  
+    .wk_anf_right
+        margin: 10px 
+        margin-top: 0 
+        width: calc(100% - 20px)

@@ -1,0 +1,51 @@
+
+@import './var'
+
+.usp_header .contentholder .user_content 
+    display: flex
+    justify-content: space-between 
+        
+.footer25
+    display: flex 
+    align-items: center 
+    > div
+        display: flex
+        flex-direction: column 
+        .usp-head
+            font-family: $euro-cond 
+            font-size: 24px 
+            text-transform: uppercase
+            color: #fff 
+        .usp-desc 
+            color: $greylight 
+            font-size: 13px 
+    > img 
+        padding-right: 20px 
+
+.usp_header .contentholder .user_content div
+    padding-left: 0
+    width: initial
+    float: initial
+
+.usp_header .contentholder 
+    height: 55px
+    background: $dark 
+
+@media only screen and (max-width: 1370px)
+    .usp_header .footer25>div .usp-head
+        font-size: 18px 
+    .usp_header .contentholder 
+        height: 45px
+
+@media only screen and (max-width: 1110px)
+    .usp_header .contentholder .user_content
+        justify-content: center 
+
+    .usp_header .footer25
+        display: none 
+        &:nth-child(1)
+            display: flex 
+
+@media only screen and (max-width: 480px)
+    .template_wrapper .usp_header
+        display: none !important 

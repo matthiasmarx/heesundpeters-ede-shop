@@ -1,10 +1,65 @@
+/*ZUM START -- gulp dev*/
+ 
 @import './var'
-// Add other Stylesheets like this: ,'./buttons', './slider'
 
-// Run "npm run dev" to start
-// Open Dev Sources in Chrome - Page Sources -> Overrides -> Enable, write something into it
-// Ready to go ;)
+@import './theme' ,'./suche' , './header' , './category' , './listing/listing_quickbuy' , './listing/listing_main' , './product' , './listing/listing_kompakt' , './listing/listing_liste' , './listing/listing_kachel' , './listing/listing_galerie' , './warenkorb' , './backend' , './checkout' , './startseite' , './footer' , './header-usp' , './etiketten' , './anmeldung'
 
-*
-    font-family: $regular
+
+
+/*Suche STYLING*/
+#template_header 
+    .template_search 
+        position: absolute
+        transform: translateY(-50%)
+        top: 50%
+    #sticky_menu .template_search 
+        position: relative 
+        top: initial 
+        transform: initial 
+
+.template_header_item.template_search 
+    width: 60%
+
+
+#template_header .sticky_navi_fixed .template_search
+    display: block 
+
+
+
+/* --------------------------------------------------------------------------------------
+    -------------------------Boxed Style des Body---------------------------------------------
+    ---------------------------------------------------------------------------------------*/        
+
+body
+    background: $greylight
+    overflow-x: hidden
     
+
+
+.template_wrapper
+    background: #fff
+
+
+/*NUR ZUM ARBEITEN*/
+//.admin_edit_tools
+//    display: none      
+
+
+
+.usp_header
+    display: block !important 
+    .contentholder
+        max-width: 100% 
+
+
+
+/* Responsive Anpassungen*/
+@media only screen and (max-width: 1210px)
+    .template_wrapper
+        max-width: calc(100vw - 20px)
+
+/*Paginierung Benutzerverwaltung*/
+.list_box a.button 
+    background: $dark 
+.list_box a.active, .list_box a.active:hover
+    background: $prime 

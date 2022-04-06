@@ -1,0 +1,279 @@
+@import './var'
+
+/* --------------------------------------------------------------------------------------
+    -------------------------BREADCRUMBS Produkt Seite ---------------------------------------------
+    ---------------------------------------------------------------------------------------*/   
+    
+#template_center_column.template_full_column
+    margin-top: 0
+    // padding: 0 
+    > div:nth-child(2):not(.backend_container):not(.orderPaginationContainer):not(.row):not(#conf_etiketten):not(.main_caption)
+        display: none  
+    div > span.breadcrumbs
+        margin: 0 
+        position: relative 
+        background: $greylight 
+        width: calc(100% + 20px)
+        transform: translateX(-50%)
+        top: -10px
+        left: 50%
+        box-sizing: border-box
+        a
+            font-family: $euro
+            font-weight: 700 
+            font-size: 15px
+            color: $text
+            padding: 15px 0 
+            display: inline-block 
+            &:first-child 
+                margin-left: 10px  
+        .mdi
+            color: $text
+            top: -1px
+            position: relative
+
+/*PRDOKT BILD*/
+.artdetail_image_frame
+    img 
+        padding: 50px
+        // max-height: 80%
+        box-sizing: border-box
+/*MORE IMAGES*/
+.artdetail_moreimages
+    margin-top: 0 
+    padding-bottom: 50px
+    .artdetail_moreimages_scroller
+        left: 25px
+
+    .artdetail_moreimages_item
+        border: 1px solid $grey2 
+        margin-right: 5px 
+        opacity: 1 
+        &.active
+            border: 1px solid $prime 
+        a 
+            background-size: 140% !important 
+            opacity: 1 
+            transition: ease all 300ms 
+            &:hover
+                background-size: 160% !important
+                
+.artdetail_shopping
+    padding: 0 10px
+    /*Produkt Titel*/
+    .dark_caption
+        background: transparent 
+        color: $dark !important 
+        text-align: left 
+        letter-spacing: .3px 
+        text-transform: initial 
+        text-align: left !important 
+        font-family: $euro-cond 
+        font-weight: 700 
+        font-size: 25px 
+        padding-top: 25px 
+        padding-left: 0
+        border-bottom: 1px solid $grey2
+    /*Produkt PREIS*/
+    .preisdiv
+        > table td b 
+            font-family: $euro-cond 
+            font-weight: 700 
+            font-size: 20px
+            letter-spacing: .5px 
+            text-transform: uppercase 
+            color: $grey3 
+        > table .preis_list_preis
+            color: $darkred 
+            font-family: $euro
+            font-weight: 700 
+            padding-right: 20px 
+    /*LAGER / LEIFERZEIT*/
+    .lager_div
+        border-width: 1px 0
+        border-style: solid 
+        border-color: $grey2 
+        margin: 10px 0
+        padding: 10px 0
+    /*BUttons + Menge*/
+    #send_cart
+        padding-top: 10px 
+        margin-bottom: 15px 
+        .mengen_eingabe
+            border-top: 1px solid $grey2 
+            border-bottom: 1px solid $grey2 
+        .artikel_menge_button input
+            text-transform: initial 
+    
+
+    /*Produkt Varianten*/
+    .varswitch
+        background: $greylight 
+        margin-bottom: 10px 
+        border: 0 
+        > p 
+            margin: 0 
+        a.varswitch_toggle
+            text-transform: initial 
+            border: 0 
+            color: $text 
+            opacity: 1 
+            &:hover 
+                border: 0 
+                color: $dark   
+        .light.small
+            font-weight: 900
+            font-family: eurostile
+            font-size: 15px
+            text-transform: uppercase
+            opacity: 1
+            letter-spacing: .5px
+            color: #136e98  
+
+    /*AKTIONEN*/
+    .function_menu_container
+        background: $prime-light 
+        border: 0 
+        opacity: 1 
+        margin-top: 5px 
+        li
+            border-right: 1px solid #A6DDF5
+            &:last-of-type
+                border: none 
+            &:hover
+                i.mdi 
+                    color: $dark
+        .function_menu
+            height: initial 
+            width: initial
+            i.mdi 
+                display: block 
+                margin: 0 auto 
+                width: 45px
+                color: $prime-mid 
+                transition: ease all 300ms 
+               
+    /*Share Buttons*/
+    .shariff
+        margin-left: -5px 
+
+/*Description*/
+h1.main_caption.dark_caption 
+    background: transparent 
+    color: $dark !important 
+    text-align: left 
+    letter-spacing: .3px 
+    text-transform: initial 
+    text-align: left !important 
+    font-family: $euro-cond 
+    font-weight: 700 
+    font-size: 25px 
+    padding-top: 25px 
+    padding-left: 25px 
+    position: relative
+    margin-top: 25px 
+
+    &::before
+        content: "" 
+        width: 130% 
+        height: 25px 
+        background: $greylight
+        position: absolute
+        top: 0 
+        left: 50% 
+        transform: translateY(-100%) translateX(-50%)
+
+.artdetail_langtext
+    padding: 0 25px 
+
+.artdetail_sealimages_item
+    padding: 0 25px 
+
+
+/*Produktdetails*/
+.artdetail_shopping
+    width: 44%
+    .mobile_h1 
+        border: 0 
+        background: $greylight 
+        center
+            text-align: left 
+            font-family: $euro 
+            font-weight: 700
+            text-transform: initial 
+            letter-spacing: .3px 
+            font-size: 16px
+            color: $text 
+    .artdetail_feature_item_caption
+        padding-left: 5px 
+        i.mdi
+            display: none 
+    .showMoreToggle
+        background: $prime-light 
+        color: $prime-mid 
+        transition: ease all 300ms 
+        &:hover
+            color: #fff 
+            
+/*Ansprechpartner*/
+.artdetail_asp
+    > table > tbody > tr > td 
+        /*ASP BILD*/
+        > div
+            border: 0 !important 
+            width: 82px !important
+            margin: 0 20px 20px 0 !important 
+        /*ASP NAME*/
+        b 
+            font-family: $euro 
+            font-weight: 700 
+            color: $dark     
+            font-size: 18px 
+    .artdetail_feature_item_caption , .artdetail_feature_item_content
+        border: 0 
+        padding: 2px 0
+        i.mdi
+            display: initial 
+            font-size: 20px !important  
+
+#oxomi_output_documents
+    padding: 50px 25px 
+    margin-top: 25px
+    border-top: 1px solid $grey2 
+
+
+
+
+
+/*TABS PRODUKTE*/
+
+.tabCtrl
+    position: relative
+    &::before
+        content: "" 
+        width: 130% 
+        height: 25px 
+        background: $greylight
+        position: absolute
+        top: 0 
+        left: 50% 
+        transform: translateY(-100%) translateX(-50%)
+
+
+/*Responsive Product*/
+@media only screen and (max-width:755px)
+    .artdetail_shopping
+        width: 65%
+    .artdetail_image_frame
+        width: 30%
+@media only screen and (max-width: 30em)
+    .artdetail_shopping
+        width: 100%
+        box-sizing: border-box
+    .artdetail_image_frame
+        width: 100%
+    .artdetail_shopping .dark_caption
+        font-size: 18px 
+    h1.main_caption.dark_caption
+        font-size: 18px 
+        
