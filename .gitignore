@@ -101,3 +101,8 @@ typings/
 
 # TernJS port file
 .tern-port
+
+
+# Inspector Styles
+dist/css/inspector%3a
+dist/css/listing
