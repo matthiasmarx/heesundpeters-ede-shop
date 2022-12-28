@@ -1,0 +1,54 @@
+@import './var'
+body
+    .template_header_item #template_search_text
+        // font-family: $euro
+        // &::placeholder
+        //     font-family: $euro
+
+    .fl-assisted-suggest .fl-as-visible .fl-as-content .fl-as-smart-suggest-blocks
+        padding-left: 0
+        padding-right: 0
+    .fl-w-100.fl-as-products
+        background: #f4f5f6
+
+    .fl-position-relative.fl-as-result-info
+        h3.fl-background.fl-text-center.fl-as-result-info-text
+            background: $grey2
+
+    .fl-assisted-suggest .fl-as-visible .fl-as-content .fl-as-block-header
+        background: $grey2
+        padding-left: 15px
+        padding-right: 15px
+    .fl-assisted-suggest .fl-as-visible .fl-as-content .fl-as-products-wrapper .fl-as-product
+        .fl-as-product-container
+            background: #fff
+            border: 0
+            border-bottom-width: 4px
+            border-bottom-style: solid
+            border-bottom-color: transparent 
+            overflow: hidden
+            &:hover
+                box-shadow: none
+                border-bottom-color: $prime
+
+    .fl-assisted-suggest .fl-as-visible .fl-as-content ul li, .fl-as-basic-block.fl-as-category .fl-as-block-content li.fl-as-category-list-option
+        padding-left: 15px
+        padding-right: 15px
+        transition: ease all 200ms
+        &:hover
+            background: $dark
+            color: white
+
+    .fl-as-basic-block.fl-as-category
+        .fl-as-block-content
+            li.fl-as-category-list-option
+                border-bottom: $grey3 1px solid 
+                
+                padding-top: 5px
+                padding-bottom: 5px
+                font-size: 13px
+
+
+    .fl-assisted-suggest .fl-as-visible .fl-as-show-all-results h3
+        background-color: $prime
+        color: white
