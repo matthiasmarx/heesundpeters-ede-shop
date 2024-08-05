@@ -87,7 +87,7 @@ const cssInspector = () => {
         // Write sourcemap
         .pipe(gulpif(!isProduction(), sourcemaps.write('')))
         // Write everything to destination folder
-        .pipe(gulp.dest(`${dest}/css/inspector%3a/heesundpeters.test.multishop.lf.net/`))
+        .pipe(gulp.dest(`${dest}/css/inspector:/shop.heesundpeters.com/`))
 }
 
 

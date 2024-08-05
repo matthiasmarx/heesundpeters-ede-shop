@@ -10,6 +10,11 @@
 #template_footer 
     max-width: 100%
     background: transparent 
+    h5 
+        font-size: 20px 
+        font-family: $euro-cond 
+        line-height: 1 
+        margin: 0 0 1em 0 
 
     .template_footer_row 
         display: flex
@@ -18,11 +23,7 @@
         margin: 12.5px 25px 
         background: $dark
        
-        h5 
-            font-size: 30px 
-            font-family: $euro-cond 
-            line-height: 1 
-            margin: 0 0 1em 0 
+        
         .uppercase 
             letter-spacing: 1px
             text-transform: uppercase 
@@ -125,71 +126,87 @@
                                 width: 100%
                                 font-size: 14px !important
 
-            // Footer Bereich 3
-            &:nth-child(3)
-                background: $text 
-                padding: 0 2%
-                height: auto 
-                border-top-width: 25px 
-                .user_content
-                    display: flex 
-                    margin: 0 auto
-                    height: 100%
-                    position: relative
-                     
-                    .footer3-pay-delivery-wrap
-                        margin: 70px 0
-                        width: 60%
-                        display: flex 
-                        > div 
-                            width: 50% 
-                            > div 
-                                display: flex 
-                                flex-wrap: wrap 
-                                img 
-                                    margin-right: 12.5px 
-                                    margin-bottom: 12.5px 
-                    .overlap-wish-article 
-                        background: $grey2 
-                        padding: 50px 100px 
-                        box-sizing: border-box 
-                        display: flex 
-                        flex-direction: column 
-                        align-items: center 
-                        justify-content: center 
-                        height: calc(100% + 25px) 
-                        transform: translateY(-12.5px)
-                        box-shadow: 0 0 20px rgba(11, 32, 41, 0.47)
-                        position: absolute 
-                        right: 0
-
-                        h5 
-                            margin-bottom: .5em
-
-                        p 
-                            color: $text 
-
-                        a.btn 
-                            background: $prime 
-                            color: #fff 
-                            margin-top: 20px 
-                            display: block 
-                            transition: ease all 400ms 
-                            &:hover 
-                                background: $dark 
+                
 
                         
-            // Footer Bereich 4
-            &:nth-child(4)
-                background: $greylight 
-                color: $dark 
-                *
-                    color: $dark 
-                .footer-normal-list
-                    a 
-                        color: $text 
-                        &:hover 
-                            color: $prime 
+                 
+    
+    .template_footer_container
+        width: 100%
+        .template_footer_head
+            display: none
+
+    // Footer 3
+    > :nth-child(2)
+        background: $text 
+        padding: 0 2%
+        height: auto 
+        border-top-width: 25px 
+        box-sizing: border-box
+       
+        .user_content
+            display: flex 
+            margin: 0 auto
+            height: 100%
+            position: relative
+                
+            .footer3-pay-delivery-wrap
+                margin: 70px 0
+                width: 60%
+                display: flex 
+                > div 
+                    width: 50% 
+                    > div 
+                        display: flex 
+                        flex-wrap: wrap 
+                        img 
+                            margin-right: 12.5px 
+                            margin-bottom: 12.5px 
+            .overlap-wish-article 
+                background: $grey2 
+                padding: 50px 100px 
+                box-sizing: border-box 
+                display: flex 
+                flex-direction: column 
+                align-items: center 
+                justify-content: center 
+                height: calc(100% + 25px) 
+                // transform: translateY(-12.5px)
+                margin-top: -12.5px
+                box-shadow: 0 0 20px rgba(11, 32, 41, 0.47)
+                position: absolute 
+                right: 0
+
+                h5 
+                    margin-bottom: .5em
+
+                p 
+                    color: $text 
+
+                a.btn 
+                    background: $prime 
+                    color: #fff 
+                    margin-top: 20px 
+                    display: block 
+                    transition: ease all 400ms 
+                    &:hover 
+                        background: $dark 
+    
+    // Footer 4
+    > :nth-child(3)
+        background: $greylight 
+        color: $dark 
+        padding-top: 40px
+        padding-bottom: 40px
+        *
+            color: $dark 
+        .footer-normal-list
+            a 
+                color: $text 
+                &:hover 
+                    color: $prime
+
+
 
                 
 #datenschutz_popup_open
@@ -272,41 +289,41 @@
 
 /*Footer 3 Responsiv*/
 @media only screen and (max-width: 1060px)
-    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .overlap-wish-article
+    #template_footer :nth-child(2) .user_content .overlap-wish-article
         padding: 50px 60px 
-    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .footer3-pay-delivery-wrap
+    #template_footer :nth-child(2) .user_content .footer3-pay-delivery-wrap
         flex-wrap: wrap 
         box-sizing: border-box
         > div 
             width: 100% 
 
 @media only screen and (max-width: 820px)
-    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content
+    #template_footer :nth-child(2) .user_content
         flex-wrap: wrap 
         padding-bottom: 40px 
         padding-left: 25px 
         padding-right: 25px 
         box-sizing: border-box 
-    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .overlap-wish-article
+    #template_footer :nth-child(2) .user_content .overlap-wish-article
         position: relative 
         transform: none
         width: 100% 
         align-items: flex-start
-    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .footer3-pay-delivery-wrap
+    #template_footer :nth-child(2) .user_content .footer3-pay-delivery-wrap
         width: 100% 
-    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .footer3-pay-delivery-wrap
+    #template_footer :nth-child(2) .user_content .footer3-pay-delivery-wrap
         > div 
             width: 50% 
 
 @media only screen and (max-width: 680px)
-        #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .footer3-pay-delivery-wrap
+        #template_footer :nth-child(2) .user_content .footer3-pay-delivery-wrap
             > div 
                 width: 100% 
 
 
 
 @media only screen and (max-width: 410px)
-    #template_footer .template_footer_row ul.template_footer_container:nth-child(3) .user_content .overlap-wish-article
+    #template_footer :nth-child(2) .user_content .overlap-wish-article
         padding: 30px !important 
 
     #template_footer .template_footer_row h5
